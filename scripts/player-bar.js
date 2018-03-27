@@ -35,5 +35,15 @@
     const percent = (currentTime / duration) * 100;
     $('#time-control .current-time').text( currentTime );
     $('#time-control input').val(percent);
+    //attempt to get total time??
+    $('#total-time').text( duration );
   }, 1000);
+
+
+//  calls player.setVolume() on input and passes it event.target.value.
+  $('#volume-control input').on('input', function(event) {
+          player.setVolume(event.target.value);
+
+});
+
 }
